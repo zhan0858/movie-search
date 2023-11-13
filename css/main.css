@@ -1,0 +1,165 @@
+:root {
+    --color-primary: #394a59;
+    --color-primary-light: #59758d;
+    --color-secondary: #36bf7f;
+    --color-secondary-light: #75d3a7;
+    --shadow: 0 .25rem 1rem #0002;
+    --color-red: #D96666;
+    accent-color: var(--color-red);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html {
+    line-height: 1.5;
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    margin: 0;
+}
+
+/* Update default margin */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+ul,
+ol,
+dl,
+dd {
+    margin: 0 0 1.5rem;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+    text-decoration-skip-ink: auto;
+    color: var(--color-secondary);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-red);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---------- Containers ---------- */
+
+.container {
+    width: min(65em, 100%);
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.container--text {
+    width: min(45em, 100%);
+}
+
+
+
+.btn {
+    background-color: var(--color-primary);
+    border: 0.125em solid var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.55em 1em 0.5em;
+    border-radius: 0.25em;
+    text-align: center;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+    color: #fff;
+}
+
+.movieItem{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.movieItem img{
+   border-radius: 0.5rem;
+   width: 20rem;
+}
+
+.movieItem h2{
+    margin-left: 1rem;
+}
+
+.release_date{
+    color: #505050;
+}
+
+.movieItem p{
+    margin-left: 1rem;
+}
